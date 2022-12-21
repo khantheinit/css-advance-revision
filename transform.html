@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+</head>
+<style>
+    /* img{
+        width: 300px;
+        transform: translate(-95%);
+        transition: 1s;
+        display: block;
+    }
+    .box{
+        border: 2px solid black;
+        margin: 20px;
+        height: 500px;
+        display: block;
+       
+    }
+    img:hover{
+        transform: translateX(100px);
+
+    } */
+     .box{
+        border: 2px solid black;
+        margin: 20px;
+        height: 500px;
+        display: block;
+        padding: 100px;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        box-shadow: 0 0 30px;
+    }
+    /* .img-two{
+        transform: rotate(40deg);
+    }
+    .img-three{
+        transform: rotate(20deg);
+    }
+    .img-one{
+        transform: rotate(0deg);
+    } */
+    img:nth-child(3){
+        transform: rotate(20deg);
+    }
+    img:nth-child(2){
+        transform: rotate(40deg);
+    }
+    img:nth-child(1){
+        transform: rotate(0deg);
+    }
+    
+</style>
+<body>
+    <!-- translate -->
+    <!-- <div class="box">
+    <img src="./car_img/japan_house.webp" alt="">
+    <img src="./car_img/japan_house.webp" alt="">
+    <img src="./car_img/japan_house.webp" alt="">
+    </div> -->
+    <div class="box">
+        <img class="img-one" src="./car_img/japan_house.webp" alt="">
+        <img class="img-two" src="./car_img/japan_house.webp" alt="">
+        <img class="img-three" src="./car_img/japan_house.webp" alt="">
+    </div>
+    
+</body>
+</html>
