@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ani_example</title>
-    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="./node_modules/imagehover.css/css/imagehover.min.css">
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.css">
 </head>
 
 <style>
@@ -13,18 +14,19 @@
     .box{
         margin: 40px;
         padding: 10px;
-        background-color: skyblue;
+        background-color: rgb(58, 87, 99);
+        color: white;
     }
     /* div:nth-child(1){
-        animation: slide 2s;
-        background-color: rgb(179, 179, 125);
+        animation: slide 2s 3;
+        background-color: rgb(204, 204, 158);
     }
     div:nth-child(2){
-        animation: slide 5s;
+        animation: slide 5s 3;
         background-color: pink;
     }
     div:nth-child(3){
-        animation: slide 7s;
+        animation: slide 7s 3;
         background-color: rgb(160, 204, 204);
     } */
     /* @keyframes fade {
@@ -52,20 +54,83 @@
         }
         
     } */
+    .imgone{
+        width: 500px;
+    }
+    body{
+        height: 9000px;
+    }
+    .click-to-top{
+        background-color: rgb(122, 92, 92);
+        color: rgb(22, 228, 125);
+       width: 40px;
+       height: 40px;
+        position: fixed;    
+        bottom: 20px;
+        right: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+    }
+    .arrow-animate{
+        animation: arrow 0.5s infinite;
+    }
+    @keyframes arrow {
+        from{
+            transform: translateY(-40px);
+        }
+        to{
+            transform: translateY(0);
+        }
+    }
 </style>
 <body>
     
-    <div class="box animate__animated animate__bounce">
+    <div class="box animate__animated animate__backInLeft" id="top-scroll">
         <h1>Hello Migalarpar</h1>
         <p>Lorelit. Cupiditate sdam nisi! Asperiores at officiis dolorem libero!</p>
     </div>
-    <div class="box animate__animated animate__backInLeft">
+    <div class="box animate__animated animate__bounce">
         <h1>Hello Migalarpar</h1>
         <p>Lorem . Cupiditate re et quibusdam nisi! Asperiores at officiis dolorem libero!</p>
     </div>
-    <div class="box animate__backInRight animate__animated">
+    <div class="box ">
         <h1>Hello Migalarpar</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ventore et quibusdam nisi! Asperiores at officiis dolorem libero!</p>
     </div>
+    <hr>
+    <figure class="imghvr-fade">
+        <img  src="./car_img/japan_house.webp" class="imgone">
+        <figcaption>
+         <H1>Hello!, December</H1>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, dicta?</p>
+        </figcaption>
+    </figure>
+    <figure class="imghvr-hinge-up">
+        <img  src="./car_img/japan_house.webp" class="imgone">
+        <figcaption>
+         <H1>Hello!, December</H1>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, dicta?</p>
+        </figcaption>
+    </figure>
+    <figure class="imghvr-zoom-out-up">
+        <img  src="./car_img/japan_house.webp" class="imgone">
+        <figcaption>
+         <H1>Hello!, December</H1>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, dicta?</p>
+        </figcaption>
+    </figure>
+    <figure class="imghvr-shutter-in-out-diag-2">
+        <img  src="./car_img/japan_house.webp" class="imgone">
+        <figcaption>
+         <H1>Hello!, December</H1>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, dicta?</p>
+        </figcaption>
+    </figure>
+    <a href="#" class="click-to-top" for="#top-scroll">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up arrow-animate" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+          </svg>
+    </a>
 </body>
 </html>
